@@ -1,15 +1,69 @@
-/* CSS để định dạng sản phẩm và cửa hàng */
-.store {
+/* CSS để định dạng trang chủ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a8474;
+}
+
+header {
+  background-color: #898989;
+  color: #fff;
   padding: 20px;
-  background-color: #f5f5f5;
+  text-align: center;
+  display: flex; /* Sử dụng flexbox */
+  justify-content: space-between; /* Canh giữa các phần tử và giữa các phần tử và mép của header */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+.logo {
+  order: 0; /* Đặt thứ tự logo là 1 để nó xuất hiện bên phải */
+}
+
+.logo-image {
+  width: 150px; /* Đặt kích thước cho logo */
+  height: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ffd700;
+}
+
+main {
+  padding: 20px;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Số sản phẩm trong một hàng */
-  grid-gap: 20px;
-  max-width: 1200px; /* Chiều rộng tối đa của lưới sản phẩm */
-  margin: 0 auto; /* Canh giữa */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product {
@@ -17,6 +71,11 @@
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  transition: transform 0.3s ease; /* Hiệu ứng khi di chuột vào sản phẩm */
+}
+
+.product:hover {
+  transform: scale(1.05); /* Phóng to khi di chuột vào sản phẩm */
 }
 
 .product-image {
@@ -36,4 +95,25 @@
 
 .product-price {
   color: #555;
+}
+
+.product-sale-price {
+  color: #ff0000; /* Màu đỏ cho giá sale */
+}
+
+.rating {
+  margin-top: 10px;
+}
+
+.star {
+  color: #ffd700; /* Màu vàng cho sao */
+}
+
+.average-rating {
+  margin-left: 5px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting</title>
+    <link rel="stylesheet" href="../css/setting.css">
+</head>
+<body>
+    <header>
+      <h1>User Page</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="user.html">Trang chủ</a></li>
+          <li><a href="profile.html">Hồ sơ</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">Cài đặt</button>
+            <div class="dropdown-content">
+              <a href="#" onclick="changePassword()">Đổi mật khẩu</a>
+              <a href="#" onclick="updateProfile()">Cập nhật hồ sơ</a>
+              <a href="#" onclick="logout()">Đăng xuất</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+    <main>
+      <section class="user-info">
+        <h2>Thông tin người dùng</h2>
+        <p><strong>Tên người dùng:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <!-- Thêm các thông tin người dùng khác nếu cần -->
+      </section>
+  
+      <section class="user-actions">
+        <h2>Các hành động</h2>
+        <!-- Thêm các nút và chức năng khác tùy theo yêu cầu -->
+      </section>
+    </main>
+  
+    <script src="../js/index.js"></script>
+  </body>
+</html>
