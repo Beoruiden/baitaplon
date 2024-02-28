@@ -3,25 +3,67 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #1a8474;
+  background-image:linear-gradient(to right, #c6ffdd, #fbd786, #7797);
 }
 
 header {
-  background-color: #898989;
+  background-image:linear-gradient(to right, #8f2929, #39150b);
   color: #fff;
-  padding: 20px;
+  padding: 5px;
   text-align: center;
-  display: flex; /* Sử dụng flexbox */
-  justify-content: space-between; /* Canh giữa các phần tử và giữa các phần tử và mép của header */
-  align-items: center; /* Canh giữa theo chiều dọc */
+  display: flex;
+
+  /* Sử dụng flexbox */
+  flex-direction: column;
+  /* Chuyển sang layout dọc */
+  align-items: center;
+  /* Canh giữa theo chiều dọc */
+
 }
+
+.head {
+  display: flex;
+  left: 10px;
+}
+
 .logo {
-  order: 0; /* Đặt thứ tự logo là 1 để nó xuất hiện bên phải */
+  order: 0;
+  padding: 10px;
+  padding-right: 30px;
+
+  /* Đặt thứ tự logo là 1 để nó xuất hiện bên phải */
 }
 
 .logo-image {
-  width: 150px; /* Đặt kích thước cho logo */
+  width: 150px;
+
+  /* Đặt kích thước cho logo */
   height: auto;
+}
+
+.banner {
+  position: relative;
+  width: 790PX;
+  height: 230px;
+
+  margin-bottom: 30PX;
+
+  /* Điều chỉnh kích thước banner tùy theo nhu cầu */
+  overflow: hidden;
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner-img.active {
+  opacity: 1;
 }
 
 h1 {
@@ -29,7 +71,8 @@ h1 {
 }
 
 nav {
-  display: flex;
+  /* display: flex; */
+  width: 100%;
 }
 
 .menu {
@@ -71,16 +114,20 @@ main {
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  transition: transform 0.3s ease; /* Hiệu ứng khi di chuột vào sản phẩm */
+  transition: transform 0.3s ease;
+  /* Hiệu ứng khi di chuột vào sản phẩm */
 }
 
 .product:hover {
-  transform: scale(1.05); /* Phóng to khi di chuột vào sản phẩm */
+  transform: scale(1.05);
+  /* Phóng to khi di chuột vào sản phẩm */
 }
 
 .product-image {
   width: 100%;
-  height: auto;
+  height: 150px;
+  /* Đặt chiều cao cố định cho ảnh */
+  /* object-fit: cover; */
   border-radius: 5px;
 }
 
@@ -98,7 +145,8 @@ main {
 }
 
 .product-sale-price {
-  color: #ff0000; /* Màu đỏ cho giá sale */
+  color: #ff0000;
+  /* Màu đỏ cho giá sale */
 }
 
 .rating {
@@ -106,7 +154,8 @@ main {
 }
 
 .star {
-  color: #ffd700; /* Màu vàng cho sao */
+  color: #cdc600;
+  /* Màu vàng cho sao */
 }
 
 .average-rating {
@@ -117,3 +166,32 @@ main {
   text-decoration: none;
   color: inherit;
 }
+
+
+
+#image-container {
+  position: relative;
+  display: inline-block;
+  /* Container sẽ co dãn dựa trên kích thước của hình ảnh nền */
+}
+
+#background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Đảm bảo kích thước hình ảnh nền phù hợp */
+}
+
+
+.page-btn{
+  font-size:medium;
+  padding-right:10px;
+ 
+}
+.pagination{
+align-items: center;
+margin: 0 5px;
+text-align: center;
+padding-top: 20px;
+}
+

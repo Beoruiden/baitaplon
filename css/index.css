@@ -32,17 +32,18 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #f5ffbe;
+  color: #dbdfc7;
   font-style: italic;
   font-weight: bold;
   text-shadow: #e0ffd6;
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 56px;
   margin-bottom: 20px;
-  box-shadow: 10px 10px;
-  text-shadow: 2PX 1PX;
+  height: 150px;
+  box-shadow: 10px 0px 10px;
+  text-shadow: 2PX 3PX;
 }
 
 .buttons {
@@ -56,7 +57,7 @@ h1 {
   margin: 0 10px;
   text-decoration: none;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #215867;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
