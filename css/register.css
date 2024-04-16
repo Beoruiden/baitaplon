@@ -1,42 +1,58 @@
 /* CSS để định dạng trang đăng ký */
+/* CSS để định dạng trang đăng nhập */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+}
+h1 {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+#register-form {
+  width: 500px;
+  background-color: antiquewhite;
+  border-radius: 1px #333;
+}
 .register-body {
-    background-color: #333; /* Màu nền nâu */
-    color: rgb(209, 173, 54); /* Màu chữ vàng */
-    font-family: Arial, sans-serif; /* Kiểu font chữ */
-    padding: 20px;
-  }
-  
-  .register-heading {
-    text-align: center;
-  }
-  
-  form {
-    text-align: center;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  input[type="submit"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 4px;
-  }
-  
-  input[type="submit"] {
-    background-color: rgb(209, 173, 54); /* Màu nền nút đăng ký */
-    color: #333; /* Màu chữ nút đăng ký */
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #f5f5f5; /* Màu nền khi di chuột vào nút đăng ký */
-    color: #333a; /* Màu chữ khi di chuột vào nút đăng ký */
-  }
-  
+  /* Màu nền nâu */
+  color: rgb(209, 173, 54); /* Màu chữ vàng */
+  font-family: Arial, sans-serif; /* Kiểu font chữ */
+}
+
+.register-heading {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px black;
+}
+
+input[type="submit"] {
+  background-color: rgb(209, 173, 54); /* Màu nền nút đăng ký */
+  color: #333; /* Màu chữ nút đăng ký */
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #f5f5f5; /* Màu nền khi di chuột vào nút đăng ký */
+  color: #333a; /* Màu chữ khi di chuột vào nút đăng ký */
+}

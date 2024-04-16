@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../css/product.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="trangchu.html"><img src="../img/logo.png" alt="Logo" class="logo-image" /></a>
+        <h1><a href="trangchu.html">TECH NETWORK</a></h1>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="./trangchu.html">TRANG CHỦ </a></li>
+          <li><a href="#">USB 3G/4G</a></li>
+          <li><a href="#">CARD MẠNG </a></li>
+          <li><a href="#">SWITCH - HUB </a></li>
+          <li><a href="#">MODERM-ROUTER </a></li>
+          <li><a href="#">MẠNG KHÔNG DÂY</a></li>
+          <li><a href="#">LINH KIỆN MẠNG</a></li>
+          <li><a href="#">Ổ CỨNG MẠNG</a></li>
+          <li><a href="#">CHỐNG SÉT APC </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-page">
+        <div class="product-image">
+          <img src="../img/usb1.jpg" alt="Product 1" class="product-image" />
+        </div>
+        <div class="product-info">
+          <a href="product.html?id=1&name=Tên Sản Phẩm&image=../img/product1.jpg">Tên Sản Phẩm</a>
+          <p class="product-price">$29.99</p>
+          <p class="product-sale-price">$19.99</p>
+          <div class="rating">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+        <div>   <span class="average-rating">(5.0)</div> 
+              <br />- 99 lượt đánh giá
+            </span>
+          </div>
+          <div class="quantity-selector">
+            <label for="quantity">Số lượng:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              value="1"
+            />
+          </div>
+          <p class="product-description">
+            Loại sản phẩm: USB 3.0 Type-A<br />
+            Dung lượng: 256 GB<br />
+            Tốc độ đọc: ~150 MB/s <br />Tốc độ ghi: ~25 MB/s<br />
+            Chất liệu: Kim loại<br />
+            Bảo hành: 60 tháng
+          </p>
+          <button class="btn btn-primary" type="button">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    // Lấy tham số từ URL
+const urlParams = new URLSearchParams(window.location.search);
+const productId = urlParams.get('id');
+const productName = urlParams.get('name');
+const productImage = urlParams.get('image');
+
+// Thay đổi thông tin sản phẩm
+document.querySelector('.product-name').textContent = productName;
+document.querySelector('.product-image img').src = productImage;
+  </script>
+</html>

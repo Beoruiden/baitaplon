@@ -1,607 +1,1069 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/trangchu.css" />
+    <script src="..//js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang chủ </title>
-  <link rel="stylesheet" href="../css/trangchu.css">
-
-</head>
-
-<body>
-  <header>
-    <div class="head">
-      <div class="logo">
-        <img src="../img/logo.png" alt="Logo" class="logo-image">
-        <H1>TECH NETWORK </H1>
-      </div>
-     
-
-      <div class="banner">
-        <img src="../img/banner1.jpg" class="banner-img active">
-        <img src="../img/sale Banner.png" class="banner-img">
+  <body>
+    <div class="contact_menu">
+      <a href="#lienhe">Liên hệ</a>
+      <a href="#hotro">Hỗ trợ</a>
+      <span>HL: 039.686.6868</span>
+      <div class="login" style="padding-right: 20px">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#loginModal"
+        
+        >
+          Đăng nhập
+        </button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
+          Đăng ký
+        </button>
       </div>
     </div>
-    <h1 class="slogan">Chuyên sỉ lẻ các thiết bị mạng </h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="./trangchu.html">TRANG CHỦ </a></li>
-        <li><a href="#">USB 3G/4G</a></li>
-        <li><a href="#">CARD MẠNG </a></li>
-        <li><a href="#">SUWITCH - HUB </a></li>
-        <li><a href="#">MODERM-ROUTER </a></li>
-        <li><a href="#">MẠNG KHÔNG DÂY</a></li>
-        <li><a href="#">LINH KINH KIỆN MẠNG</a></li>
-        <li><a href="#">Ổ CỨNG MẠNG</a></li>
-        <li><a href="#">CHỐNG SÉT APC </a></li>
-      </ul>
-    </nav>
 
+    <header>
+      <div class="head">
+        <div class="logo">
+          <img src="../img/logo.png" alt="Logo" class="logo-image" />
+          <h1>TECH NETWORK</h1>
+        </div>
 
-  </header>
+        <div class="banner">
+          <img src="../img/banner1.jpg" class="banner-img active" />
+          <img src="../img/sale Banner.png" class="banner-img" />
+        </div>
+      </div>
+      <div class="headfind">
+        <h1 class="slogan">Chuyên sỉ lẻ các thiết bị mạng</h1>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="./trangchu.html">TRANG CHỦ </a></li>
+          <li><a href="#">USB 3G/4G</a></li>
+          
+          <li><a href="#">SWITCH - HUB </a></li>
+          <li><a href="#">MODERM-ROUTER </a></li>
+          <li><a href="#">MẠNG KHÔNG DÂY</a></li>
+          <li><a href="#">Ổ CỨNG MẠNG</a></li>
+          <li><a href="#">CHỐNG SÉT APC </a></li>
+        </ul>
+      </nav>
 
-  <main>
-    <div class="product-grid">
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/hub.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="loginModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel" style="color: black;">Đăng nhập</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Nội dung của trang login.html -->
+              <h1>Login</h1>
+              <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" /><br /><br />
+          
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" /><br /><br />
+          
+                <label for="rememberMe">Remember Me</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe" /><br /><br />
+          
+                <!-- <button type="button" onclick="login()">Login</button> -->
+              </form>
+             
+            </body>
+            <script>
+              const loginForm = document.getElementById("loginForm");
+              const usernameInput = document.getElementById("username");
+              const passwordInput = document.getElementById("password");
+              const rememberMeCheckbox = document.getElementById("rememberMe");
+          
+              function login() {
+                const username = usernameInput.value;
+                const password = passwordInput.value;
+          
+                if (rememberMeCheckbox.checked) {
+                  localStorage.setItem("username", username);
+                  localStorage.setItem("password", password);
+                } else {
+                  localStorage.removeItem("username");
+                  localStorage.removeItem("password");
+                }
+          
+                // Add your login logic here
+                // For simplicity, let's just log the username and password
+                console.log(`Username: ${username}, Password: ${password}`);
+              }
+          
+              window.onload = function () {
+                const savedUsername = localStorage.getItem("username");
+                const savedPassword = localStorage.getItem("password");
+          
+                if (savedUsername && savedPassword) {
+                  usernameInput.value = savedUsername;
+                  passwordInput.value = savedPassword;
+                }
+              };
+            </script>
+              <!--  -->
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Đóng
+              </button>
+              <button type="button" onclick="login()" class="btn btn-primary">Đăng nhập</button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Modal Đăng ký -->
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">Đăng ký</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Nội dung của trang register.html -->
+              <body class="register-body">
+                <h1 class="register-heading">Đăng ký</h1>
+                <form method="post" id="register-form">
+                  <label for="new_username">Tên người dùng mới:</label><br />
+                  <input type="text" id="new_username" name="new_username" /><br />
+                  <label for="new_password">Mật khẩu mới:</label><br />
+                  <input
+                    type="password"
+                    id="new_password"
+                    name="new_password"
+                  /><br /><br />
+                <input type="submit" value="Đăng ký" />
+                </form>
+                <script>
+                
+                  // Lấy thông tin đăng ký từ localStorage
+                  const registerForm = document.getElementById("register-form");
+                  registerForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const newUsername = document.getElementById("new_username").value;
+                    const newPassword = document.getElementById("new_password").value;
+                    localStorage.setItem("username", newUsername);
+                    localStorage.setItem("password", newPassword);}
+                  )
 
-      <!-- Sản phẩm 2 -->
-      <div class="product">
-        <img src="../img/gateway.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
+                    /// Điền thông tin đăng ký vào trang đăng ký
+
+                  loginForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    const newUsername = document.getElementById("new_username").value;
+                    const newPassword = document.getElementById("new_password").value;
+                    localStorage.setItem("username", newUsername);
+                    localStorage.setItem("password", newPassword);
+                    // Hiển thị thông báo đăng ký thành công
+                    alert("Đăng ký thành công!");
+                    window.location.href = "/";
+
+                    // Điền thông tin đăng ký vào trang đăng nhập
+                    const loginForm = document.createElement("form");
+                    loginForm.action = "";
+                    loginForm.method = "post";
+                    const usernameInput = document.createElement("input");
+                    usernameInput.type = "text";
+                    usernameInput.name = "username";
+                    usernameInput.value = newUsername;
+                    const passwordInput = document.createElement("input");
+                    passwordInput.type = "password";
+                    passwordInput.name = "password";
+                    passwordInput.value = newPassword;
+                    const submitInput = document.createElement("input");
+                    submitInput.type = "submit";
+                    submitInput.value = "Đăng nhập";
+                    loginForm.appendChild(usernameInput);
+                    loginForm.appendChild(passwordInput);
+                    loginForm.appendChild(submitInput);
+                    document.body.appendChild(loginForm);
+                    loginForm.submit();
+                    window.location.href = "/";
+                  });
+                </script>
+              </body>
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-primary">Đăng ký</button>
+            </div>
           </div>
         </div>
-      </div>
+      </div>  
+    </header>
 
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
+    <main>
+      <div class="product-grid">
+        <!-- Sản phẩm 1 -->
+        <a href="product.html">
+          <div class="product">
+            <img src="../img/hub.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB HUB 4 cổng </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
           </div>
+        </a>
+
+        <!-- Sản phẩm 2 --><a href="product.html">
+          <div class="product">
+            <img
+              src="../img/gateway.jpg"
+              alt="Product 1"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3 class="product-name">WIFI getway tốc độ cao</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img
+              src="../img/modem1.png"
+              alt="Product 1"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3 class="product-name">Switch Totolink</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/modem.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">WIFI 5 CHẤU -tốc độ cao </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img
+              src="../img/modem3.jpg"
+              alt="Product 1"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3 class="product-name">WIFI 4 CHẤU-tốc độ cao</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img
+              src="../img/modem2.jpg"
+              alt="Product 1"
+              class="product-image"
+            />
+            <div class="product-info">
+              <h3 class="product-name">WIFI 3 CHẤU -tốc độ cao & ổn định </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/usb1.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB Sandisk CZ74 Kim loại – 64GB</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 -->
+        <a href="product.html">
+          <div class="product">
+            <img src="../img/hub.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB HUB 4 cổng </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/usb2.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB 128GB SanDisk SDCZ73-G46</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/usb3.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB Flash Drive CZ600- 16G</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/usb4.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB 3.0 SanDisk Ultra Flair</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/usb5.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">USB KINGSTON DT101 - 16GB</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan1.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">CAP LAN - truyền tốc độ cao </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan2.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">CAP LAN 15M- Chống đứt bền bỉ </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan3.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">CAP LAN gia đình -5M-10M-15M </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan4.webp" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">CAP LAN VĂN PHÒNG tốc độ cao</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan5.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc1.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc2.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc3.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc4.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lan1.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">CAP LAN - truyền tốc độ cao </h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc5.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/oc6.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs1.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs2.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs3.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs4.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs5.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a>
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/cs6.jpeg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lk1.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a
+        >
+
+        <!-- Sản phẩm 1 --><a href="product.html">
+          <div class="product">
+            <img src="../img/lk2.jpg" alt="Product 1" class="product-image" />
+            <div class="product-info">
+              <h3 class="product-name">Tên Sản Phẩm</h3>
+              <p class="product-price">$29.99</p>
+              <p class="product-sale-price">$19.99</p>
+              <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="average-rating"
+                  >(5.0)<br />- 99 lượt đánh giá
+                </span>
+              </div>
+            </div>
+          </div></a>
+
+          <!-- Sản phẩm 1 --><a href="product.html">
+            <div class="product">
+              <img src="../img/cs4.jpeg" alt="Product 1" class="product-image" />
+              <div class="product-info">
+                <h3 class="product-name">Tên Sản Phẩm</h3>
+                <p class="product-price">$29.99</p>
+                <p class="product-sale-price">$19.99</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="average-rating"
+                    >(5.0)<br />- 99 lượt đánh giá
+                  </span>
+                </div>
+              </div>
+            </div></a
+          >
+
+          <!-- Sản phẩm 1 --><a href="product.html">
+            <div class="product">
+              <img
+                src="../img/modem1.png"
+                alt="Product 1"
+                class="product-image"
+              />
+              <div class="product-info">
+                <h3 class="product-name">Switch Totolink</h3>
+                <p class="product-price">$29.99</p>
+                <p class="product-sale-price">$19.99</p>
+                <div class="rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="average-rating"
+                    >(5.0)<br />- 99 lượt đánh giá
+                  </span>
+                </div>
+              </div>
+            </div></a
+          >
+            <!-- Sản phẩm 1 --><a href="product.html">
+              <div class="product">
+                <img
+                  src="../img/modem2.jpg"
+                  alt="Product 1"
+                  class="product-image"
+                />
+                <div class="product-info">
+                  <h3 class="product-name">WIFI 3 CHẤU -tốc độ cao & ổn định </h3>
+                  <p class="product-price">$29.99</p>
+                  <p class="product-sale-price">$19.99</p>
+                  <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="average-rating"
+                      >(5.0)<br />- 99 lượt đánh giá
+                    </span>
+                  </div>
+                </div>
+              </div></a
+            >
+    
+    <!-- Thêm sản phẩm 2, 3, ..., 30 vào đây -->
+  </div>
+</main>
+
+  <div class="pagination">
+    <!-- Nút phân trang -->
+    <button class="page-btn"><a href="trangchu.html">1</a></button>
+    <button class="page-btn"><a href="trangchu.html">2</a></button>
+    <!-- Thêm nút phân trang khác tùy thuộc vào số lượng trang -->
+  </div>
+  
+
+ 
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          
+         
+        </div>
+        <div class="col-md-12">
+          <p>Copyright © 2023 Tech Network. All rights reserved.</p>
+          <p>Designed by <a href="https://www.tech-network.com/">Tech Network</a></p>
+        </div>
+        <div class="col-md-4">
+          <h5>HL: 039.686.6868</h5>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+            Đăng nhập
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
+            Đăng ký
+          </button>
         </div>
       </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sản phẩm 1 -->
-      <div class="product">
-        <img src="../img/01.jpg" alt="Product 1" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Tên Sản Phẩm </h3>
-          <p class="product-price">$29.99</p>
-          <p class="product-sale-price">$19.99</p>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="average-rating">(5.0)</span>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- Thêm sản phẩm 2, 3, ..., 30 vào đây -->
-
     </div>
-
-    <div class="pagination">
-      <!-- Nút phân trang -->
-      <button class="page-btn">1</button>
-      <button class="page-btn">2</button>
-      <!-- Thêm nút phân trang khác tùy thuộc vào số lượng trang -->
+  </footer>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Liên hệ</h5>
+          <ul>
+            <li><a href="#lienhe">Liên hệ</a></li>
+            <li><a href="#hotro">Hỗ trợ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>HL: 039.686.6868</h5>
+        </div>
+        <div class="col-md-4">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+            Đăng nhập
+          </button>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
+            Đăng ký
+          </button>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <p>Copyright © 2023 Tech Network. All rights reserved.</p>
+        <p>Designed by <a href="https://www.tech-network.com/">Tech Network</a></p>
+      </div>
     </div>
+  </footer>
 
     
-    
-  </main>
-
-
-  <script src="../js/index.js"></script>
-</body>
-
+  </body>
 </html>

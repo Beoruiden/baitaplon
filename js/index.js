@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const banners = document.querySelectorAll(".banner-img");
   let currentIndex = 0;
 
@@ -17,6 +17,5 @@ document.addEventListener("DOMContentLoaded", function() {
     showBanner(currentIndex);
   }
 
-  setInterval(nextBanner, 5000); // Thay đổi hình ảnh mỗi 5 giây
+  setInterval(nextBanner, 3000); // Thay đổi hình ảnh mỗi 5 giây
 });
-
