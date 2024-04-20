@@ -156,6 +156,7 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   padding: 15px;
   transition: transform 0.3s ease;
+ 
   /* Hiệu ứng khi di chuột vào sản phẩm */
 }
 
@@ -258,4 +259,21 @@ footer p {
 }
 .container .row ul li{
   display: flex;
+}
+.add-to-cart {
+  background-color: #74e478;
+  border: none;
+  color: white;
+  padding: 7px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 16px; */
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.add-to-cart:hover {
+  background-color: #17be1f;
 }

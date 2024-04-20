@@ -33,7 +33,7 @@
           <img src="../img/usb1.jpg" alt="Product 1" class="product-image" />
         </div>
         <div class="product-info">
-          <a href="product.html?id=1&name=Tên Sản Phẩm&image=../img/product1.jpg">Tên Sản Phẩm</a>
+          <h1>USB SANDICK</h1>
           <p class="product-price">$29.99</p>
           <p class="product-sale-price">$19.99</p>
           <div class="rating">
@@ -67,18 +67,11 @@
             Thêm vào giỏ hàng
           </button>
         </div>
+
       </div>
+      
+      
     </main>
   </body>
-  <script>
-    // Lấy tham số từ URL
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
-const productName = urlParams.get('name');
-const productImage = urlParams.get('image');
-
-// Thay đổi thông tin sản phẩm
-document.querySelector('.product-name').textContent = productName;
-document.querySelector('.product-image img').src = productImage;
-  </script>
+  
 </html>

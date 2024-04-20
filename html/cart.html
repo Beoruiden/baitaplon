@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/trangchu.css">
+
+  <script src="../js/jquery-3.6.4.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+      <!-- Nội dung của header -->
+    </header>
+    <main>
+        <button type="button" ><a href="trangchu.html">BACK</a></button>
+      <div class="container">
+        <h1>GIỎ HÀNG </h1>
+     
+        <table class="table">
+          <thead>
+            <tr>
+                
+              <th>Sản phẩm</th>
+              <th>Tên </th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Tổng cộng</th>
+              <th></th>
+              
+            </tr>
+          </thead>
+          <tbody id="cartTable">
+            <tr>
+              <td><img src="../img/as2.webp" alt="Product 1" style="width: 80px;"></td>
+              <td>Sản phẩm 1</td>
+              <td>20.000</td>
+                <td>1</td>
+              <td>20.000</td>
+              <td><button type="button" class="btn btn-danger" onclick="removeFromCart(this)">Xóa</button></td>
+            </tr>
+            <tr>
+              <td><img src="../img/modem1.png" alt="Product 2" style="width: 80px;"></td>
+              <td>Sản phẩm 2</td>
+              <td>235.000</td>
+              <td>2</td>
+              <td>470.000</td>
+              <td><button type="button" class="btn btn-danger" onclick="removeFromCart(this)">Xóa</button></td>
+            </tr>
+            <tr>
+                <td><img src="../img/usb3.jpg" alt="Product 2" style="width: 80px;"></td>
+                <td>Sản phẩm 3</td>
+                <td>120.000</td>
+                <td>3</td>
+                <td>360.000</td>
+                <td><button type="button" class="btn btn-danger" onclick="removeFromCart(this)">Xóa</button></td>
+              </tr>
+          </tbody>
+        </table>
+        <button tyle="button">THANH TOÁN </button>
+      </div>
+    </main>
+    <footer style="position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 1rem;">
+        
+            <p>Copyright © 2023 Tech Network. All rights reserved.</p>
+            <p>Designed by <a href="https://www.tech-network.com/">Tech Network</a></p>
+          
+    </footer>
+  </body>
+  
+</html>

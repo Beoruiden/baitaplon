@@ -11,55 +11,73 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
+            background-image: linear-gradient(to right, #c6ffdd, #fbd786, #7797);
         }
     .card {
             margin-bottom: 20px;
         }
-    .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
+        .card-img-top {
+        float: left;
+        margin-right: 10px;
+        height: 200px;
+        width: 300px;
+        object-fit: cover;
+        position:static;
+}
+
     .card-title {
             font-size: 1.5rem;
             margin-bottom: 10px;
+            position:static;
         }
     .card-text {
             font-size: 1rem;
             margin-bottom: 20px;
         }
     </style>
-</head>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+<link rel="stylesheet" href="../css/bootstrap.min.css"></head>
 <body>
     <div class="container mt-5">
-        <h1>Tin Tức Mới Nhất</h1>
+        <h1><b>Tin Tức Mới Nhất</b></h1>
+        <div class="back">
+            <a href="./trangchu.html"><button class="btn btn-primary">ĐẾN TRANG CHỦ
+            </button></a>
+
+
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="news1.jpg" class="card-img-top" alt="...">
+                    <img src="../img/news1.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Tiêu đề tin tức 1</h5>
-                        <p class="card-text">Một số ví dụ nhanh về văn bản để xây dựng trên tiêu đề thẻ và tạo nên phần lớn nội dung của thẻ.</p>
-                        <a href="#" class="btn btn-primary">Đọc thêm</a>
+                        <h5 class="card-title">Doanh nghiệp công nghệ Việt 'bắt tay' sản xuất thiết bị mạng Make in Vietnam</h5>
+                        <p class="card-text">Các thiết bị mạng Make in Vietnam mới sẽ mang thương hiệu MK Network, dự kiến ra mắt thị trường vào năm 2024.</p>
+                        <a href="#" class="btn ">Đọc thêm</a>
+                        <br>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="news2.jpg" class="card-img-top" alt="...">
+                    <img src="../img/new2.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Tiêu đề tin tức 2</h5>
-                        <p class="card-text">Một số ví dụ nhanh về văn bản để xây dựng trên tiêu đề thẻ và tạo nên phần lớn nội dung của thẻ.</p>
-                        <a href="#" class="btn btn-primary">Đọc thêm</a>
+                        <h5 class="card-title">Các công ty muốn đưa dữ liệu 'đám mây' xuống biển, vì sao?</h5>
+                        <p class="card-text">Microsoft và các công ty đang muốn chuyển các trung tâm dữ liệu ra đại dương. Họ sẽ nhấn chìm máy tính và thiết bị mạng xuống biển để lưu trữ dữ liệu.</p>
+                        <a href="#" class="btn ">Đọc thêm</a>
                     </div>
                 </div>
             </div>
+            <br>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="news3.jpg" class="card-img-top" alt="...">
+                    <img src="../img/news3.jpeg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Tiêu đề tin tức 3</h5>
-                        <p class="card-text">Một số ví dụ nhanh về văn bản để xây dựng trên tiêu đề thẻ và tạo nên phần lớn nội dung của thẻ.</p>
-                        <a href="#" class="btn btn-primary">Đọc thêm</a>
+                        <h5 class="card-title">Giải pháp an ninh mạng 'Make in Vietnam' ra thị trường toàn cầu</h5>
+                        <p class="card-text">Giải pháp an ninh mạng SafeGate hoàn toàn do các chuyên gia công nghệ, kỹ sư Việt Nam nghiên cứu phát triển đã đạt được thỏa thuận ra thị trường quốc tế.</p>
+                        <a href="#" class="btn">Đọc thêm</a>
                     </div>
                 </div>
             </div>
